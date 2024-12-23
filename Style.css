@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Jost-Black;
+    src: url(Jost-Black.ttf);
+}
+
+@font-face {
+    font-family: Jost-Semibold;
+    src: url(Jost-SemiBold.ttf);
+}
+
+section {
+    height: 100vh;
+    background-color: rgb(39, 41, 68);
+    font-family: sans-serif;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    color: #eee;
+    align-items: center;
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.score h2 {
+    font-size: 1.8rem;
+    font-family: Jost-Semibold;
+}
+
+.score p {
+    text-align: center;
+    padding: 1em;
+    font-size: 1.5rem;
+    font-family: Jost-Semibold;
+}
+
+.intro {
+    color: #eee;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    font-family: Jost-Black;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.intro button, .match button {
+    width: 150px;
+    height: 50px;
+    color: #eee;
+    border: none;
+    border-radius: 3px;
+    background: rgb(45, 117, 96);
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: Jost-Semibold;
+}
+
+.match {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+    
+}
+
+.winner {
+    color: #eee;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Jost-Black;
+}
+
+.hands, .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.player-hand {
+    transform: rotateY(180deg);
+}
+
+div.fadeOut {
+    opacity:0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity:1;
+    pointer-events:all;
+}
+
+
+@keyframes shakePlayer {
+    0% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+    15% {
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    25% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+    35% {
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    50% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+    65% {
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    75% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+    85% {
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeComputer {
+    0% {
+        transform: translateY(0px);
+    }
+    15% {
+        transform: translateY(-50px);
+    }
+    25% {
+        transform: translateY(0px);
+    }
+    35% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    65% {
+        transform: translateY(-50px);
+    }
+    75% {
+        transform: translateY(0px);
+    }
+    85% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.roundWinner {
+display: flex;
+flex-direction: column;
+/* background-color: black; */
+/* padding: 2em; */
+/* position: relative;
+width: 100%;
+bottom: -1%;
+z-index: 3; */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+transition: opacity 0.5s ease 0.5s;
+}
+
+.roundWinner h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-family: Jost-Semibold;
+}
+
+.roundWinner button {
+    margin: auto;
+    padding: .7em 2em;
+    margin-top: 2em;
+    background-color: rgb(45, 117, 96);
+    font-weight: bold;
+    border: none;
+    font-size: 1em;
+    font-family: Jost-Semibold;
+    color: #eee;
+}
+
+@media only screen and (max-width:768px) {
+    .intro button, .match button {
+        width: 80px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .hands, .options {
+        justify-content: center; 
+        gap: 20px;   
+    }
+
+    .hands img {
+        width: 180px;
+    }
+
+    .winner {
+    font-size: 2.5rem;
+    }   
+    
+}
+
+@media only screen and (max-width:400px) {
+    .hands img {
+        width: 150px;
+    }
+
+    .winner {
+        font-size: 2.5rem;
+        line-height: 1;
+        }    
+
+}

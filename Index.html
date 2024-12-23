@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<section class="game">
+<!-- scoring system -->
+<div class="score fadeOut">
+<div class="player-score">
+<h2>Player</h2>
+<p>0</p>
+</div>
+<div class="computer-score">
+<h2>Computer</h2>
+<p>0</p>
+</div>
+</div>
+<!-- intro screen -->
+<div class="intro">
+<h2>Rock, Paper, Scissors</h2>
+<button>Play</button>
+</div>
+<!-- Default screen -->
+<div class="match fadeOut">
+<h2 class="winner">Choose an option</h2>
+<div class="hands">
+<img src="rock.png" alt="player hand" class="player-hand">
+<img src="rock.png" alt="computer hand" class="computer-hand">
+</div>
+<div class="options">
+<button class="rock">rock</button>
+<button class="paper">paper</button>
+<button class="scissors">scissors</button>
+</div>
+</div>
+<!-- Round winner screen -->
+<div class="roundWinner fadeOut">
+<h1 class="roundWinnerText">Player wins this round</h1>
+<button class="restart">Restart</button>
+</div>
+</section>
+
+
+<script src="App.js"></script>
+</body>
+</html>
